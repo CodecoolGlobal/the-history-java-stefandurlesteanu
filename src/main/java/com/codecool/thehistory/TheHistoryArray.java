@@ -1,7 +1,5 @@
 package com.codecool.thehistory;
 
-import java.util.Arrays;
-
 public class TheHistoryArray implements TheHistory {
 
     /**
@@ -12,6 +10,16 @@ public class TheHistoryArray implements TheHistory {
     @Override
     public void add(String text) {
         //TODO: check the TheHistory interface for more information
+        if (wordsArray.length == 0) {
+            wordsArray = text.split(" ");
+        } else {
+            String temp = "";
+            for (int i = 0; i < wordsArray.length; i++) {
+                temp += wordsArray[i] + " ";
+            }
+            temp += text;
+            wordsArray = temp.split(" ");
+        }
     }
 
     @Override

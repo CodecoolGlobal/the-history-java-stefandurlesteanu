@@ -1,9 +1,7 @@
 package com.codecool.thehistory;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.ListIterator;
 
 public class TheHistoryArrayList implements TheHistory {
     /**
@@ -14,6 +12,10 @@ public class TheHistoryArrayList implements TheHistory {
     @Override
     public void add(String text) {
         //TODO: check the TheHistory interface for more information
+        String[] arr = text.split(" ");
+        for (int i = 0; i< arr.length; i++){
+            wordsArrayList.add(arr[i]);
+        }
     }
 
     @Override
